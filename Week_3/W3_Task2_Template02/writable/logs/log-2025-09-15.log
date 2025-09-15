@@ -1,0 +1,110 @@
+CRITICAL - 2025-09-15 11:56:45 --> ErrorException: include(home.php): Failed to open stream: No such file or directory
+[Method: GET, Route: mhs]
+in APPPATH\Views\template_02.php on line 38.
+ 1 APPPATH\Views\template_02.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(home.php): Failed to open stream: No such file or directory', 'C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\app\\Views\\template_02.php', 38)
+ 2 APPPATH\Views\template_02.php(38): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\app\\Views\\template_02.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('template_02', [], true)
+ 6 APPPATH\Controllers\mahasiswa.php(19): view('template_02', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:11:19 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\mahasiswamodel::getAllMahasiswa
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\mahasiswa.php(20): CodeIgniter\Model->__call('getAllMahasiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:11:23 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\mahasiswamodel::getAllMahasiswa
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\mahasiswa.php(20): CodeIgniter\Model->__call('getAllMahasiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:11:37 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\mahasiswamodel::getAllMahasiswa
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\mahasiswa.php(20): CodeIgniter\Model->__call('getAllMahasiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:12:27 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\mahasiswamodel::getAllMahasiswa
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\mahasiswa.php(20): CodeIgniter\Model->__call('getAllMahasiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:12:50 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\mahasiswamodel::getAllMahasiswa
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\mahasiswa.php(20): CodeIgniter\Model->__call('getAllMahasiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:15:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswa_view.php"
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswa_view.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_view', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(23): view('mahasiswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:15:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswa_view.php"
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswa_view.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_view', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(23): view('mahasiswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
+CRITICAL - 2025-09-15 12:15:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswa_view.php"
+[Method: GET, Route: mhs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswa_view.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_view', [], true)
+ 3 APPPATH\Controllers\mahasiswa.php(23): view('mahasiswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ymete\\OneDrive - Politeknik Negeri Bandung\\CI4_Tugas\\WOW\\W3_Task2_TemplateV2\\public\\index.php')
