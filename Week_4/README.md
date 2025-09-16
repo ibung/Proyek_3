@@ -1,60 +1,91 @@
-# CodeIgniter 4 Framework
+-----
 
-## What is CodeIgniter?
+## Sistem Informasi Akademik Sederhana
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Ini adalah aplikasi web sederhana yang dibangun menggunakan **PHP** dengan framework **CodeIgniter 4**. Aplikasi ini berfungsi sebagai Sistem Informasi Akademik (SIAK) dasar yang mengelola data mahasiswa dan pengambilan mata kuliah.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+-----
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Fitur Utama
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Aplikasi ini memiliki dua hak akses (role) utama dengan fitur yang berbeda:
 
-## Important Change with index.php
+### 👤 Admin
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+  * **Login & Logout** yang aman.
+  * **Dashboard** untuk melihat ringkasan.
+  * **CRUD Mahasiswa**: Dapat menambah, melihat, mengedit (update), dan menghapus (delete) data mahasiswa.
+  * **Pencarian**: Mencari mahasiswa berdasarkan Nama atau NIM.
+  * **Enrollment**: Mengelola (menambah/menghapus) mata kuliah yang diambil oleh setiap mahasiswa.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### 🎓 Mahasiswa
 
-**Please** read the user guide for a better explanation of how CI4 works!
+  * **Login & Logout** yang aman.
+  * **Lihat Profil**: Melihat detail data pribadi.
+  * **Lihat Jadwal**: Melihat daftar mata kuliah yang sedang diambil.
+  * **Enrollment Mandiri**: Mahasiswa dapat memilih dan mengubah sendiri mata kuliah yang ingin diambil dari daftar yang tersedia.
 
-## Repository Management
+-----
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Teknologi yang Digunakan
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+  * **Framework**: CodeIgniter 4
+  * **Bahasa**: PHP 8+
+  * **Database**: MySQL
+  * **Desain**: HTML & CSS Native
+  * **Pola Arsitektur**: Model-View-Controller (MVC)
 
-## Contributing
+-----
 
-We welcome contributions from the community.
+## Panduan Instalasi
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+Berikut adalah cara untuk menjalankan proyek ini di lingkungan lokal Anda:
 
-## Server Requirements
+1.  **Clone atau Unduh Proyek**
+    Pastikan Anda memiliki semua file proyek di dalam satu folder.
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+2.  **Setup Database**
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+      * Buat sebuah database baru di phpMyAdmin (contoh: `akademik_db`).
+      * Impor file `.sql` yang berisi struktur tabel (`users`, `students`, `courses`, `takes`) dan contoh datanya.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+3.  **Konfigurasi `.env`**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+      * Salin file `env` (tanpa titik di depan) dan ubah namanya menjadi `.env`.
+      * Buka file `.env` dan sesuaikan konfigurasi database:
+        ```
+        database.default.hostname = localhost
+        database.default.database = akademik_db_w4
+        database.default.username = root
+        database.default.password = 
+        database.default.DBDriver = MySQLi
+        ```
+      * Pastikan `app.baseURL` juga sudah benar:
+        ```
+        app.baseURL = 'http://localhost:8080'
+        ```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+4.  **Install Composer**
+    Buka terminal atau command prompt di folder proyek, lalu jalankan perintah ini untuk menginstal dependensi:
+
+    ```sh
+    composer install
+    ```
+
+5.  **Jalankan Aplikasi**
+    Masih di terminal, jalankan server pengembangan bawaan CodeIgniter:
+
+    ```sh
+    php spark serve
+    ```
+
+    Aplikasi sekarang dapat diakses melalui `http://localhost:8080` di browser Anda.
+
+6.  **Akun untuk Login**
+
+      * **Admin**:
+          * Username: `admin`
+          * Password: `admin123`
+      * **Mahasiswa**:
+          * Username: `ibnuu`
+          * Password: `ibnuu123`
