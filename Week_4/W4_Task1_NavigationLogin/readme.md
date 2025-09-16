@@ -1,90 +1,60 @@
-Sistem Informasi Akademik Sederhana
-Ini adalah aplikasi web sederhana yang dibangun menggunakan PHP dengan framework CodeIgniter 4. Aplikasi ini berfungsi sebagai Sistem Informasi Akademik (SIAK) dasar yang mengelola data mahasiswa dan pengambilan mata kuliah.
+# CodeIgniter 4 Framework
 
-Fitur Utama
-Aplikasi ini memiliki dua hak akses (role) utama dengan fitur yang berbeda:
+## What is CodeIgniter?
 
-👤 Admin
-Login & Logout yang aman.
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
+More information can be found at the [official site](https://codeigniter.com).
 
-Dashboard untuk melihat ringkasan.
+This repository holds the distributable version of the framework.
+It has been built from the
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-CRUD Mahasiswa: Dapat menambah, melihat, mengedit (update), dan menghapus (delete) data mahasiswa.
+More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-Pencarian: Mencari mahasiswa berdasarkan Nama atau NIM.
+You can read the [user guide](https://codeigniter.com/user_guide/)
+corresponding to the latest version of the framework.
 
-Enrollment: Mengelola (menambah/menghapus) mata kuliah yang diambil oleh setiap mahasiswa.
+## Important Change with index.php
 
-🎓 Mahasiswa
-Login & Logout yang aman.
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
-Lihat Profil: Melihat detail data pribadi.
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
 
-Lihat Jadwal: Melihat daftar mata kuliah yang sedang diambil.
+**Please** read the user guide for a better explanation of how CI4 works!
 
-Enrollment Mandiri: Mahasiswa dapat memilih dan mengubah sendiri mata kuliah yang ingin diambil dari daftar yang tersedia.
+## Repository Management
 
-Teknologi yang Digunakan
-Framework: CodeIgniter 4
+We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
 
-Bahasa: PHP 8+
+This repository is a "distribution" one, built by our release preparation script.
+Problems with it can be raised on our forum, or as issues in the main repository.
 
-Database: MySQL
+## Contributing
 
-Desain: HTML & CSS Native
+We welcome contributions from the community.
 
-Pola Arsitektur: Model-View-Controller (MVC)
+Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
 
-Panduan Instalasi
-Berikut adalah cara untuk menjalankan proyek ini di lingkungan lokal Anda:
+## Server Requirements
 
-Clone atau Unduh Proyek
-Pastikan Anda memiliki semua file proyek di dalam satu folder.
+PHP version 8.1 or higher is required, with the following extensions installed:
 
-Setup Database
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-Buat sebuah database baru di phpMyAdmin (contoh: akademik_db).
+> [!WARNING]
+> - The end of life date for PHP 7.4 was November 28, 2022.
+> - The end of life date for PHP 8.0 was November 26, 2023.
+> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
+> - The end of life date for PHP 8.1 will be December 31, 2025.
 
-Impor file .sql yang berisi struktur tabel (users, students, courses, takes) dan contoh datanya.
+Additionally, make sure that the following extensions are enabled in your PHP:
 
-Konfigurasi .env
-
-Salin file env (tanpa titik di depan) dan ubah namanya menjadi .env.
-
-Buka file .env dan sesuaikan konfigurasi database:
-
-database.default.hostname = localhost
-database.default.database = akademik_db_w4
-database.default.username = root
-database.default.password = 
-database.default.DBDriver = MySQLi
-Pastikan app.baseURL juga sudah benar:
-
-app.baseURL = 'http://localhost:8080'
-Install Composer
-Buka terminal atau command prompt di folder proyek, lalu jalankan perintah ini untuk menginstal dependensi:
-
-Bash
-
-composer install
-Jalankan Aplikasi
-Masih di terminal, jalankan server pengembangan bawaan CodeIgniter:
-
-Bash
-
-php spark serve
-Aplikasi sekarang dapat diakses melalui http://localhost:8080 di browser Anda.
-
-Akun untuk Login
-
-Admin:
-
-Username: admin
-
-Password: admin123
-
-Mahasiswa:
-
-Username: ibnuu
-
-Password: ibnuu123
+- json (enabled by default - don't turn it off)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
