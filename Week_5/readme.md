@@ -27,7 +27,3 @@ Ini adalah proyek pengembangan sistem informasi akademik sederhana yang dibangun
 -   **Pola Desain**: Model-View-Controller (MVC)
 
 ---
-
-## 📸 Screenshot Hasil Uji Coba
-
-Di bagian ini, Anda dapat menyisipkan beberapa gambar (screenshot) yang menampilkan fitur-fitur utama dari aplikasi. Sebaiknya tampilkan gambar untuk alur penting seperti halaman login, halaman kelola mahasiswa oleh admin, contoh validasi form yang menampilkan pesan error, dialog konfirmasi hapus, serta halaman pemilihan mata kuliah yang interaktif.
