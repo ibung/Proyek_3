@@ -25,6 +25,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     // Rute Umum (Bisa diakses Admin & Mahasiswa)
     $routes->get('home', 'Home::index');
     $routes->get('logout', 'LoginController::logout');
+    $routes->get('/', 'Home::index');
 
     //----------------------------------------------------------------
     // RUTE KHUSUS MAHASISWA
@@ -55,5 +56,13 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         // Manajemen Mata Kuliah Mahasiswa
         $routes->get('students/(:num)/enroll', 'StudentController::enroll/$1');
         $routes->post('students/(:num)/enroll/save', 'StudentController::saveEnrollment/$1');
+
+        // === TAMBAHKAN BLOK INI UNTUK KELOLA MATA KULIAH ===
+        $routes->get('courses', 'CourseController::index');
+        $routes->get('courses/new', 'CourseController::new');
+        $routes->post('courses/create', 'CourseController::create');
+        $routes->get('courses/edit/(:num)', 'CourseController::edit/$1');
+        $routes->post('courses/update/(:num)', 'CourseController::update/$1');
+        $routes->get('courses/delete/(:num)', 'CourseController::delete/$1');
     });
 });

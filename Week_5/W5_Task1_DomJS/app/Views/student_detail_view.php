@@ -44,7 +44,7 @@
         ? base_url('admin/students') 
         : base_url('home');
 ?>
-<a href="<?= $backUrl; ?>" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Daftar Mahasiswa</a>
+<a href="<?= $backUrl; ?>" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Home</a>
 
 <style>
 /* Style asli dari file Anda */

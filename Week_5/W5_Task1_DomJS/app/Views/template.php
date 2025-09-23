@@ -34,6 +34,7 @@
             
             <?php if (session()->get('role') === 'admin'): ?>
                 <a href="<?= base_url('admin/students'); ?>">Kelola Mahasiswa</a>
+                <a href="<?= base_url('admin/courses'); ?>">Kelola Matkul</a>
             
             <?php elseif (session()->get('role') === 'mahasiswa'): ?>
                 <a href="<?= base_url('dashboard/detail'); ?>">Profil Saya</a>
@@ -56,24 +57,33 @@
 </div>
 
 <script>
-    // Jalankan script setelah seluruh halaman dimuat
     document.addEventListener('DOMContentLoaded', function() {
-        
-        // Dapatkan path URL saat ini (misal: "/admin/students")
+        // Dapatkan path URL saat ini (contoh: "/admin/courses/new")
         const currentPath = window.location.pathname;
 
         // Pilih semua link di dalam menu
         const menuLinks = document.querySelectorAll('#main-menu a');
 
-        // Loop melalui setiap link
         menuLinks.forEach(link => {
-            // Dapatkan path dari atribut href link tersebut
             const linkPath = new URL(link.href).pathname;
 
-            // Cek apakah path URL saat ini sama dengan path link
-            if (currentPath === linkPath) {
-                // Jika sama, tambahkan class 'active'
-                link.classList.add('active');
+            // --- LOGIKA BARU YANG LEBIH PINTAR ---
+
+            // 1. Kondisi khusus untuk link "Home" (harus sama persis)
+            if (linkPath === '/home') {
+                if (currentPath === '/home' || currentPath === '/') {
+                    link.classList.add('active');
+                }
+                return; // Lanjut ke link berikutnya
+            }
+
+            // 2. Untuk link lain, gunakan logika "startsWith"
+            // Jangan terapkan pada link root '/' atau logout
+            if (linkPath !== '/' && linkPath.includes('/logout') === false) {
+                // Jika path saat ini dimulai dengan path link, maka aktifkan
+                if (currentPath.startsWith(linkPath)) {
+                    link.classList.add('active');
+                }
             }
         });
     });

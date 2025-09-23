@@ -10,7 +10,7 @@ class LoginController extends BaseController
     {
         // Jika sudah login, lempar ke halaman home
         if (session()->get('isLoggedIn')) {
-            return redirect()->to('/home');
+            return redirect()->to(site_url('home'));
         }
         return view('login_view');
     }
@@ -34,7 +34,7 @@ class LoginController extends BaseController
                 'role'       => $user['role'],
                 'isLoggedIn' => true
             ]);
-            return redirect()->to('/home');
+            return redirect()->to(site_url('home'));
         } 
         
         // Jika username atau password salah
