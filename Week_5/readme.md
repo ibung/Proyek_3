@@ -1,4 +1,4 @@
-# Proyek Sistem Informasi Akademik (SIAKAD) Sederhana - Misi 4
+# Proyek Sistem Informasi Akademik Sederhana - Misi 4 Week 5
 
 Ini adalah proyek pengembangan sistem informasi akademik sederhana yang dibangun menggunakan framework CodeIgniter 4 dengan pola desain MVC. Proyek ini merupakan hasil pengerjaan dari Misi 4 yang berfokus pada peningkatan interaktivitas menggunakan JavaScript dan manipulasi DOM.
 
@@ -30,19 +30,4 @@ Ini adalah proyek pengembangan sistem informasi akademik sederhana yang dibangun
 
 ## 📸 Screenshot Hasil Uji Coba
 
-*(Catatan: Ganti gambar-gambar di bawah ini dengan screenshot dari aplikasi Anda)*
-
-**1. Halaman Login**
-![Login](https://via.placeholder.com/600x350.png?text=Screenshot+Halaman+Login)
-
-**2. Halaman Kelola Mahasiswa (Admin)**
-![Kelola Mahasiswa](https://via.placeholder.com/600x350.png?text=Screenshot+Kelola+Mahasiswa)
-
-**3. Contoh Validasi Form (Error)**
-![Validasi Form](https://via.placeholder.com/600x350.png?text=Screenshot+Validasi+Form)
-
-**4. Dialog Konfirmasi Hapus**
-![Konfirmasi Hapus](https://via.placeholder.com/600x350.png?text=Screenshot+Konfirmasi+Hapus)
-
-**5. Halaman Ubah Jadwal dengan Kalkulator SKS**
-![Enroll SKS](https://via.placeholder.com/600x350.png?text=Screenshot+Kalkulator+SKS)
+Di bagian ini, Anda dapat menyisipkan beberapa gambar (screenshot) yang menampilkan fitur-fitur utama dari aplikasi. Sebaiknya tampilkan gambar untuk alur penting seperti halaman login, halaman kelola mahasiswa oleh admin, contoh validasi form yang menampilkan pesan error, dialog konfirmasi hapus, serta halaman pemilihan mata kuliah yang interaktif.
