@@ -8,10 +8,6 @@ class LoginController extends BaseController
 {
     public function index()
     {
-        // Jika sudah login, lempar ke halaman home
-        if (session()->get('isLoggedIn')) {
-            return redirect()->to(site_url('home'));
-        }
         return view('login_view');
     }
 
@@ -19,32 +15,43 @@ class LoginController extends BaseController
     {
         $session = session();
         $model = new UserModel();
-        
-        $username = $this->request->getVar('username');
+
+        // mengambil email dan password dari form login
+        $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $user = $model->where('username', $username)->first();
+        // mencari pengguna dari email
+        $user = $model->where('email', $email)->first();
 
-        if ($user && password_verify($password, $user['password'])) {
-            // Jika verifikasi berhasil, buat session
-            $session->set([
+        // hashed
+        if ($user && md5($password) === $user['password']) {
+            
+            // buat session
+            $sessionData = [
                 'user_id'    => $user['id'],
-                'username'   => $user['username'],
-                'full_name'  => $user['full_name'],
+                'name'       => $user['name'],
+                'email'      => $user['email'],
                 'role'       => $user['role'],
                 'isLoggedIn' => true
-            ]);
-            return redirect()->to(site_url('home'));
-        } 
-        
-        // Jika username atau password salah
-        $session->setFlashdata('error', 'Username atau Password Salah');
-        return redirect()->to('/login');
+            ];
+            $session->set($sessionData);
+
+            // ke dashboard sesuai role
+            if ($user['role'] === 'gudang') {
+                return redirect()->to(site_url('gudang/dashboard'));
+            } else {
+                return redirect()->to(site_url('dapur/dashboard'));
+            }
+        }
+
+        // email atau password salah
+        $session->setFlashdata('error', 'Email atau Password yang Anda masukkan salah.');
+        return redirect()->to('login');
     }
 
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('login');
     }
 }
