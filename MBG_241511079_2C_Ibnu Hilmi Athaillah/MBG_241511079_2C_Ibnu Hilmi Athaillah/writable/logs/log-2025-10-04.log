@@ -1,0 +1,67 @@
+INFO - 2025-10-04 00:29:33 --> REDIRECTED ROUTE at http://localhost:8080/login
+DEBUG - 2025-10-04 00:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 00:30:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'mbg', 3306, '', 0)
+#1 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\app\Controllers\LoginController.php(24): CodeIgniter\BaseModel->first()
+#7 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(933): App\Controllers\LoginController->process()
+#8 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\app\Controllers\LoginController.php(24): CodeIgniter\BaseModel->first()
+#6 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(933): App\Controllers\LoginController->process()
+#7 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\Proyek 3\Proyek_3\Week_MidtermExam\MidtermExam\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#13 {main}
+CRITICAL - 2025-10-04 00:30:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(24): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->process()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\Week_MidtermExam\\MidtermExam\\public\\index.php')
+DEBUG - 2025-10-04 00:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-04 00:31:40 --> REDIRECTED ROUTE at http://localhost:8080/login
+DEBUG - 2025-10-04 00:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 00:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
