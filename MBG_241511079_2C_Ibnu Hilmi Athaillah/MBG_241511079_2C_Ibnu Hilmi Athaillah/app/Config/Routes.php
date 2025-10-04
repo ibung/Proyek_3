@@ -17,6 +17,10 @@ $routes->group('gudang', ['filter' => 'auth:gudang'], static function ($routes) 
 
     $routes->get('bahan/new', 'GudangController::new');
     $routes->post('bahan/create', 'GudangController::create');
+
+    $routes->get('bahan/edit/(:num)', 'GudangController::edit/$1');
+    $routes->post('bahan/update/(:num)', 'GudangController::update/$1');
+
 });
 
 // role dapur
