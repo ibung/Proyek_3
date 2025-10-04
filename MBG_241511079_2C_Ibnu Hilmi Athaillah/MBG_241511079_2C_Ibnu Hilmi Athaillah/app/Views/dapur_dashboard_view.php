@@ -5,7 +5,7 @@
         <a class="nav-link active px-3" href="<?= site_url('dapur/dashboard'); ?>">Dashboard Dapur</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link px-3" href="#">Buat Permintaan Baru</a>
+        <a class="nav-link px-3" href="<?= site_url('dapur/permintaan/new'); ?>">Buat Permintaan Baru</a>
     </li>
 <?= $this->endSection(); ?>
 

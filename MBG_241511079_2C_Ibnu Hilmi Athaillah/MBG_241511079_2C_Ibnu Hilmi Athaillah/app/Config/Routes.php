@@ -24,10 +24,13 @@ $routes->group('gudang', ['filter' => 'auth:gudang'], static function ($routes) 
     $routes->post('bahan/delete/(:num)', 'GudangController::delete/$1');
 
     $routes->get('permintaan', 'GudangController::permintaanList');
-    
+
 });
 
 // role dapur
 $routes->group('dapur', ['filter' => 'auth:dapur'], static function ($routes) {
     $routes->get('dashboard', 'DapurController::index');
+
+    $routes->get('permintaan/new', 'DapurController::newRequest');
+    $routes->post('permintaan/create', 'DapurController::createRequest');
 });

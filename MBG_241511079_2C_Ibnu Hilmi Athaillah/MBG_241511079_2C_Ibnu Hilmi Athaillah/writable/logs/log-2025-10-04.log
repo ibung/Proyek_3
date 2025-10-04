@@ -1153,3 +1153,45 @@ DEBUG - 2025-10-04 05:39:17 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-10-04 05:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-04 05:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-04 05:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 05:46:42 --> Error: Class "App\Controllers\PermintaanDetailModel" not found
+[Method: POST, Route: dapur/permintaan/create]
+in APPPATH\Controllers\DapurController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DapurController->createRequest()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DapurController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 05:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 05:47:25 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\DapurController.php(90): CodeIgniter\Model->insert(Array)
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\DapurController->createRequest()
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DapurController))
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#15 {main}
+DEBUG - 2025-10-04 05:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 05:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
