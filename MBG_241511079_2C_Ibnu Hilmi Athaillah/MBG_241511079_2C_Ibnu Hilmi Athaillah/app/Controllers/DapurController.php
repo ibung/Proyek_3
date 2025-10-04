@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PermintaanModel;
-use App\Models\BahanBakuModel; // <-- TAMBAHKAN INI
+use App\Models\BahanBakuModel; 
 
 class DapurController extends BaseController
 {

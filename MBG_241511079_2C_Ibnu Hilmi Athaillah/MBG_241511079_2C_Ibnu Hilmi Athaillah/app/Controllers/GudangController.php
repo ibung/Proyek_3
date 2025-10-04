@@ -3,10 +3,12 @@
 namespace App\Controllers;
 
 use App\Models\BahanBakuModel;
+use App\Models\PermintaanModel;
 use App\Models\PermintaanDetailModel;
 
 class GudangController extends BaseController
 {
+    // Menampilkan dashboard stok bahan baku
     public function index()
     {
         $bahanBakuModel = new BahanBakuModel();
@@ -17,8 +19,7 @@ class GudangController extends BaseController
         return view('gudang_dashboard_view', $data);
     }
 
-
-    // memanggil view form yang baru
+    // Menampilkan form tambah
     public function new()
     {
         $data = [
@@ -27,6 +28,7 @@ class GudangController extends BaseController
         return view('gudang_form_view', $data);
     }
 
+    // Memproses data dari form tambah
     public function create()
     {
         $model = new BahanBakuModel();
@@ -44,18 +46,18 @@ class GudangController extends BaseController
         return redirect()->to(site_url('gudang/dashboard'))->with('success', 'Data bahan baku berhasil ditambahkan.');
     }
 
-    // menampilkan form edit
+    // Menampilkan form edit
     public function edit($id)
     {
         $model = new BahanBakuModel();
         $data = [
             'title' => 'Form Edit Bahan Baku',
-            'bahan' => $model->find($id) 
+            'bahan' => $model->find($id)
         ];
         return view('gudang_form_view', $data);
     }
 
-    // memproses data dari form edit
+    // Memproses data dari form edit
     public function update($id)
     {
         $model = new BahanBakuModel();
@@ -73,26 +75,33 @@ class GudangController extends BaseController
         return redirect()->to(site_url('gudang/dashboard'))->with('success', 'Data bahan baku berhasil diubah.');
     }
 
-    // menghapus data berdasarkan ID
+    // Menghapus data
     public function delete($id)
     {
         $bahanBakuModel = new BahanBakuModel();
         $permintaanDetailModel = new PermintaanDetailModel();
 
-        // Langkah 1: Periksa dulu apakah bahan ini dipakai di tabel lain.
         $isInUse = $permintaanDetailModel->where('bahan_id', $id)->first();
 
         if ($isInUse) {
-            // JIKA IYA: Jangan hapus, langsung kirim pesan error.
             return redirect()->to(site_url('gudang/dashboard'))
                              ->with('error', 'Gagal menghapus! Bahan baku ini sedang digunakan dalam data permintaan.');
         }
 
-        // JIKA TIDAK: Lanjutkan proses hapus dengan perintah yang jelas.
-        // Kita gunakan where() secara manual untuk memuaskan fitur keamanan CodeIgniter.
         $bahanBakuModel->where('id', $id)->delete();
         
         return redirect()->to(site_url('gudang/dashboard'))
                          ->with('success', 'Data bahan baku berhasil dihapus.');
+    }
+
+    // Menampilkan daftar permintaan
+    public function permintaanList()
+    {
+        $permintaanModel = new PermintaanModel();
+        $data = [
+            'title' => 'Daftar Permintaan Bahan',
+            'requests' => $permintaanModel->getWaitingRequestsWithUser()
+        ];
+        return view('gudang_permintaan_view', $data);
     }
 }

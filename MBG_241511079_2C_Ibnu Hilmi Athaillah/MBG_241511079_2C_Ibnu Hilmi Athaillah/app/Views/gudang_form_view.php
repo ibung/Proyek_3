@@ -7,6 +7,9 @@
     <li class="nav-item">
         <a class="nav-link active px-3" href="#">Form Bahan Baku</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link px-3" href="<?= site_url('gudang/permintaan'); ?>">Proses Permintaan</a>
+    </li>
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>

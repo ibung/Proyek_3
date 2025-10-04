@@ -7,6 +7,9 @@
     <li class="nav-item">
         <a class="nav-link px-3" href="<?= site_url('gudang/bahan/new'); ?>">Tambah Bahan Baku</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link px-3" href="<?= site_url('gudang/permintaan'); ?>">Proses Permintaan</a>
+    </li>
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -15,16 +18,12 @@
     </div>
 
     <?php if (session()->getFlashdata('success')): ?>
-        <div class="alert alert-success" role="alert">
-            <?= session()->getFlashdata('success'); ?>
-        </div>
+        <div class="alert alert-success" role="alert"><?= session()->getFlashdata('success'); ?></div>
+    <?php endif; ?>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
 
-    <?php if (session()->getFlashdata('error')): ?>
-        <div class="alert alert-danger" role="alert">
-            <?= session()->getFlashdata('error'); ?>
-        </div>
-    <?php endif; ?>
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
@@ -55,7 +54,6 @@
                                     </td>
                                     <td>
                                         <a href="<?= site_url('gudang/bahan/edit/' . $bahan['id']); ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        
                                         <form action="<?= site_url('gudang/bahan/delete/' . $bahan['id']); ?>" method="post" class="d-inline" id="form-hapus-<?= $bahan['id']; ?>">
                                             <?= csrf_field(); ?>
                                             <button type="button" class="btn btn-danger btn-sm btn-hapus" 
