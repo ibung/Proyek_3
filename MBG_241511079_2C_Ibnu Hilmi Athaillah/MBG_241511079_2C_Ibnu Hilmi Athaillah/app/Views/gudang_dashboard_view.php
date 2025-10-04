@@ -49,11 +49,13 @@
                                             $status_class = 'bg-success';
                                             if ($bahan['status'] == 'segera_kadaluarsa') $status_class = 'bg-warning text-dark';
                                             if ($bahan['status'] == 'kadaluarsa') $status_class = 'bg-danger';
+                                            if ($bahan['status'] == 'habis') $status_class = 'bg-primary';
                                         ?>
                                         <span class="badge <?= $status_class; ?>"><?= esc(str_replace('_', ' ', $bahan['status'])); ?></span>
                                     </td>
                                     <td>
                                         <a href="<?= site_url('gudang/bahan/edit/' . $bahan['id']); ?>" class="btn btn-warning btn-sm">Edit</a>
+                                        
                                         <form action="<?= site_url('gudang/bahan/delete/' . $bahan['id']); ?>" method="post" class="d-inline" id="form-hapus-<?= $bahan['id']; ?>">
                                             <?= csrf_field(); ?>
                                             <button type="button" class="btn btn-danger btn-sm btn-hapus" 

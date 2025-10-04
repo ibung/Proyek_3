@@ -58,55 +58,54 @@
     <script src="<?= base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
 
     <script>
-    document.addEventListener('click', function(event) {
-        // Gabungkan listener untuk semua tombol yang butuh konfirmasi
-        if (event.target.matches('.btn-hapus') || event.target.matches('.btn-konfirmasi')) {
-            event.preventDefault();
-            const button = event.target;
-            const formId = button.dataset.formId;
-            
-            // Ambil judul dan teks dari data attribute, atau siapkan default untuk tombol hapus
-            const title = button.dataset.title || 'Konfirmasi Hapus';
-            const namaBahan = button.dataset.nama || '';
-            const text = button.dataset.text || `Anda yakin ingin menghapus bahan baku <strong>${namaBahan}</strong>? Tindakan ini tidak dapat dibatalkan.`;
+        // Listener untuk semua tombol yang butuh konfirmasi
+        document.addEventListener('click', function(event) {
+            if (event.target.matches('.btn-hapus') || event.target.matches('.btn-konfirmasi')) {
+                event.preventDefault();
+                const button = event.target;
+                const formId = button.dataset.formId;
+                
+                const title = button.dataset.title || 'Konfirmasi Hapus';
+                const namaBahan = button.dataset.nama || '';
+                const text = button.dataset.text || `Anda yakin ingin menghapus bahan baku <strong>${namaBahan}</strong>? Tindakan ini tidak dapat dibatalkan.`;
 
-            showConfirmationModal(title, text, formId);
-        }
-    });
+                showConfirmationModal(title, text, formId);
+            }
+        });
 
-    function showConfirmationModal(title, text, formId) {
-        const existingModal = document.getElementById('confirmationModal');
-        if (existingModal) { existingModal.remove(); }
+        // Fungsi untuk menampilkan modal konfirmasi serbaguna
+        function showConfirmationModal(title, text, formId) {
+            const existingModal = document.getElementById('confirmationModal');
+            if (existingModal) { existingModal.remove(); }
 
-        const modalHTML = `
-            <div class="modal-overlay" id="confirmationModal">
-                <div class="modal-box">
-                    <h4>${title}</h4>
-                    <p>${text}</p>
-                    <div class="modal-buttons">
-                        <button class="btn btn-secondary" id="btn-batal">Batal</button>
-                        <button class="btn btn-primary" id="btn-konfirmasi">Ya, Lanjutkan</button>
+            const modalHTML = `
+                <div class="modal-overlay" id="confirmationModal">
+                    <div class="modal-box">
+                        <h4>${title}</h4>
+                        <p>${text}</p>
+                        <div class="modal-buttons">
+                            <button class="btn btn-secondary" id="btn-batal">Batal</button>
+                            <button class="btn btn-primary" id="btn-konfirmasi">Ya, Lanjutkan</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-        const modal = document.getElementById('confirmationModal');
-        setTimeout(() => modal.classList.add('show'), 10);
+            const modal = document.getElementById('confirmationModal');
+            setTimeout(() => modal.classList.add('show'), 10);
 
-        document.getElementById('btn-batal').addEventListener('click', () => {
-            modal.classList.remove('show');
-            setTimeout(() => modal.remove(), 300);
-        });
+            document.getElementById('btn-batal').addEventListener('click', () => {
+                modal.classList.remove('show');
+                setTimeout(() => modal.remove(), 300);
+            });
 
-        document.getElementById('btn-konfirmasi').addEventListener('click', () => {
-            document.getElementById(formId).submit();
-        });
-    }
-    </script>
+            document.getElementById('btn-konfirmasi').addEventListener('click', () => {
+                document.getElementById(formId).submit();
+            });
+        }
 
-    <script>
+        // Skrip untuk notifikasi hilang otomatis setelah 3 detik
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.alert').forEach(function(alert) {
                 setTimeout(() => {

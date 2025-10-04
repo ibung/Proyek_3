@@ -22,7 +22,7 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label for="menu_makan" class="form-label">Nama Menu Masakan</label>
                         <input type="text" class="form-control" id="menu_makan" name="menu_makan" value="<?= old('menu_makan'); ?>" required>
                     </div>
@@ -30,9 +30,13 @@
                         <label for="tgl_masak" class="form-label">Tanggal Masak</label>
                         <input type="date" class="form-control" id="tgl_masak" name="tgl_masak" value="<?= old('tgl_masak', date('Y-m-d')); ?>" required>
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <label for="jumlah_porsi" class="form-label">Jumlah Porsi</label>
                         <input type="number" class="form-control" id="jumlah_porsi" name="jumlah_porsi" value="<?= old('jumlah_porsi'); ?>" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="created_at" class="form-label">Tanggal Permintaan</label>
+                        <input type="date" class="form-control" id="created_at" name="created_at" value="<?= old('created_at', date('Y-m-d')); ?>" required>
                     </div>
                 </div>
                 
@@ -67,7 +71,7 @@
                             </tr>
                         </thead>
                         <tbody id="daftar-bahan-diminta">
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -86,13 +90,12 @@
 
             addBtn.addEventListener('click', function() {
                 const selectedOption = bahanSelect.options[bahanSelect.selectedIndex];
-                if (!selectedOption.value) return; // Jangan lakukan apa-apa jika belum memilih
+                if (!selectedOption.value) return;
 
                 const bahanId = selectedOption.value;
                 const bahanNama = selectedOption.getAttribute('data-nama');
                 const bahanSatuan = selectedOption.getAttribute('data-satuan');
 
-                // Cek agar tidak menambah bahan yang sama dua kali
                 if (document.getElementById(`item-${bahanId}`)) {
                     alert('Bahan ini sudah ada di dalam daftar.');
                     return;

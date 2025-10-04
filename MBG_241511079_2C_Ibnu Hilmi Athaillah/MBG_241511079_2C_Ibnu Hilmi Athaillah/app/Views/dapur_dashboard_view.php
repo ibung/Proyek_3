@@ -11,6 +11,9 @@
 
 <?= $this->section('content'); ?>
     
+    <?php if (session()->getFlashdata('success')): ?><div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div><?php endif; ?>
+    <?php if (session()->getFlashdata('error')): ?><div class="alert alert-danger"><?= session()->getFlashdata('error'); ?></div><?php endif; ?>
+
     <div class="card mb-4">
         <div class="card-header">
             <h5>Bahan Baku Tersedia untuk Diminta</h5>
@@ -57,42 +60,47 @@
             <h5>Riwayat Permintaan Anda</h5>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Tgl Masak</th>
-                            <th>Menu Makanan</th>
-                            <th>Jumlah Porsi</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php if (!empty($riwayat_permintaan)): ?>
-                            <?php $no = 1; foreach ($riwayat_permintaan as $item): ?>
-                                <tr>
-                                    <td><?= $no++; ?></td>
-                                    <td><?= date('d M Y', strtotime($item['tgl_masak'])); ?></td>
-                                    <td><?= esc($item['menu_makan']); ?></td>
-                                    <td><?= esc($item['jumlah_porsi']); ?></td>
-                                    <td>
-                                        <?php
-                                            $status_class = 'bg-success';
-                                            if ($item['status'] == 'menunggu') $status_class = 'bg-warning text-dark';
-                                            if ($item['status'] == 'ditolak') $status_class = 'bg-danger';
-                                        ?>
-                                        <span class="badge <?= $status_class; ?>"><?= esc($item['status']); ?></span>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr>
-                                <td colspan="5" class="text-center">Anda belum pernah membuat permintaan.</td>
-                            </tr>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
+            <div class="accordion" id="accordionRiwayat">
+                <?php if (!empty($riwayat_permintaan)): ?>
+                    <?php foreach ($riwayat_permintaan as $item): ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-riwayat-<?= $item['id']; ?>">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-riwayat-<?= $item['id']; ?>">
+                                    <div class="d-flex justify-content-between w-100 me-3">
+                                        <span><strong>Menu:</strong> <?= esc($item['menu_makan']); ?> (<?= date('d M Y', strtotime($item['tgl_masak'])); ?>)</span>
+                                        <span>
+                                            <?php
+                                                $status_class = 'bg-success';
+                                                if ($item['status'] == 'menunggu') $status_class = 'bg-warning text-dark';
+                                                if ($item['status'] == 'ditolak') $status_class = 'bg-danger';
+                                            ?>
+                                            <strong>Status:</strong> <span class="badge <?= $status_class; ?>"><?= esc($item['status']); ?></span>
+                                        </span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapse-riwayat-<?= $item['id']; ?>" class="accordion-collapse collapse" data-bs-parent="#accordionRiwayat">
+                                <div class="accordion-body">
+                                    <h6>Detail Bahan yang Diminta:</h6>
+                                    <ul class="list-group">
+                                        <?php if (!empty($item['details'])): ?>
+                                            <?php foreach($item['details'] as $detail): ?>
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <?= esc($detail['nama_bahan']); ?>
+                                                    <span class="badge bg-info rounded-pill"><?= esc($detail['jumlah_diminta']); ?> <?= esc($detail['satuan']); ?></span>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <li class="list-group-item">Tidak ada detail bahan untuk permintaan ini.</li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p class="text-center">Anda belum pernah membuat permintaan.</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
