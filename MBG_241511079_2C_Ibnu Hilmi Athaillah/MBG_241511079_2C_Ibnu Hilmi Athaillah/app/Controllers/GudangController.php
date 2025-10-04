@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\BahanBakuModel;
+use App\Models\PermintaanDetailModel;
 
 class GudangController extends BaseController
 {
@@ -70,5 +71,28 @@ class GudangController extends BaseController
 
         $model->update($id, $data);
         return redirect()->to(site_url('gudang/dashboard'))->with('success', 'Data bahan baku berhasil diubah.');
+    }
+
+    // menghapus data berdasarkan ID
+    public function delete($id)
+    {
+        $bahanBakuModel = new BahanBakuModel();
+        $permintaanDetailModel = new PermintaanDetailModel();
+
+        // Langkah 1: Periksa dulu apakah bahan ini dipakai di tabel lain.
+        $isInUse = $permintaanDetailModel->where('bahan_id', $id)->first();
+
+        if ($isInUse) {
+            // JIKA IYA: Jangan hapus, langsung kirim pesan error.
+            return redirect()->to(site_url('gudang/dashboard'))
+                             ->with('error', 'Gagal menghapus! Bahan baku ini sedang digunakan dalam data permintaan.');
+        }
+
+        // JIKA TIDAK: Lanjutkan proses hapus dengan perintah yang jelas.
+        // Kita gunakan where() secara manual untuk memuaskan fitur keamanan CodeIgniter.
+        $bahanBakuModel->where('id', $id)->delete();
+        
+        return redirect()->to(site_url('gudang/dashboard'))
+                         ->with('success', 'Data bahan baku berhasil dihapus.');
     }
 }

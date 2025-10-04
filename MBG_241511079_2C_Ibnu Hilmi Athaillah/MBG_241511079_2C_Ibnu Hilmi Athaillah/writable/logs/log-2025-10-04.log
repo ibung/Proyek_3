@@ -151,3 +151,643 @@ DEBUG - 2025-10-04 02:30:46 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-10-04 02:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-04 02:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-04 02:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-04 02:40:09 --> REDIRECTED ROUTE at http://localhost:8080/login
+DEBUG - 2025-10-04 02:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 02:42:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: gudang/bahan/delete/0]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2819.
+ 1 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete('0', false)
+ 3 APPPATH\Controllers\GudangController.php(81): CodeIgniter\BaseModel->delete('0')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('0')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:44:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:44:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:44:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:44:22 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:44:51 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:44:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:44:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:44:51 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(80): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:49:14 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:49:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:49:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:49:14 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:49:21 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:49:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:49:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:49:21 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 02:49:36 --> TypeError: CodeIgniter\HTTP\RedirectResponse::with(): Argument #1 ($key) must be of type string, array given, called in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php on line 101
+[Method: POST, Route: gudang/bahan/delete/9]
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 132.
+ 1 APPPATH\Controllers\GudangController.php(101): CodeIgniter\HTTP\RedirectResponse->with([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('9')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 02:49:50 --> TypeError: CodeIgniter\HTTP\RedirectResponse::with(): Argument #1 ($key) must be of type string, array given, called in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php on line 101
+[Method: POST, Route: gudang/bahan/delete/4]
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 132.
+ 1 APPPATH\Controllers\GudangController.php(101): CodeIgniter\HTTP\RedirectResponse->with([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('4')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:51:42 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:51:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:51:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:51:42 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:56:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:56:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:56:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:56:31 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-04 02:56:52 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`)) in D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `ba...', 0)
+#1 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ba...')
+#2 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ba...')
+#3 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ba...', Array, false)
+#4 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\BaseModel.php(1152): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\app\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+#7 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+#8 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+#9 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Proyek 3\Proyek_3\MBG_241511079_2C_Ibnu Hilmi Athaillah\MBG_241511079_2C_Ibnu Hilmi Athaillah\system\rewrite.php(44): require_once('D:\\Proyek 3\\Pro...')
+#14 {main}
+CRITICAL - 2025-10-04 02:56:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+[Method: POST, Route: gudang/bahan/delete/6]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:56:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'6\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'6\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+CRITICAL - 2025-10-04 02:56:52 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`mbg`.`permintaan_detail`, CONSTRAINT `permintaan_detail_ibfk_2` FOREIGN KEY (`bahan_id`) REFERENCES `bahan_baku` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `bahan_baku`
+WHERE `id` = \'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `bahan_baku`
+WHERE `id` = \'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `bahan_baku`
+WHERE `id` = \'6\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `bahan_baku`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\GudangController.php(82): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 02:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 02:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 02:59:48 --> Error: Cannot access protected property CodeIgniter\Database\MySQLi\Connection::$DBDebug
+[Method: POST, Route: gudang/bahan/delete/6]
+in APPPATH\Controllers\GudangController.php on line 85.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 03:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 03:03:22 --> Error: Class "App\Controllers\PermintaanDetailModel" not found
+[Method: POST, Route: gudang/bahan/delete/6]
+in APPPATH\Controllers\GudangController.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 03:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 03:04:06 --> Error: Class "App\Controllers\PermintaanDetailModel" not found
+[Method: POST, Route: gudang/bahan/delete/6]
+in APPPATH\Controllers\GudangController.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('6')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 03:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 03:09:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: gudang/bahan/delete/0]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2819.
+ 1 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1152): CodeIgniter\Model->doDelete('0', false)
+ 3 APPPATH\Controllers\GudangController.php(93): CodeIgniter\BaseModel->delete('0')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\GudangController->delete('0')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GudangController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\Proyek 3\\Proyek_3\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\MBG_241511079_2C_Ibnu Hilmi Athaillah\\public\\index.php')
+DEBUG - 2025-10-04 03:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 03:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

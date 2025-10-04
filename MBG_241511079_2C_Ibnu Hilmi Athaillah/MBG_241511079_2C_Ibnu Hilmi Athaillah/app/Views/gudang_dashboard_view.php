@@ -20,6 +20,11 @@
         </div>
     <?php endif; ?>
 
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger" role="alert">
+            <?= session()->getFlashdata('error'); ?>
+        </div>
+    <?php endif; ?>
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
@@ -28,10 +33,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nama Bahan</th>
-                            <th>Kategori</th>
                             <th>Jumlah</th>
-                            <th>Satuan</th>
-                            <th>Tgl Kadaluarsa</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -42,10 +44,7 @@
                                 <tr>
                                     <td><?= $no++; ?></td>
                                     <td><?= esc($bahan['nama']); ?></td>
-                                    <td><?= esc($bahan['kategori']); ?></td>
-                                    <td><?= esc($bahan['jumlah']); ?></td>
-                                    <td><?= esc($bahan['satuan']); ?></td>
-                                    <td><?= date('d M Y', strtotime($bahan['tanggal_kadaluarsa'])); ?></td>
+                                    <td><?= esc($bahan['jumlah']); ?> <?= esc($bahan['satuan']); ?></td>
                                     <td>
                                         <?php
                                             $status_class = 'bg-success';
@@ -56,12 +55,21 @@
                                     </td>
                                     <td>
                                         <a href="<?= site_url('gudang/bahan/edit/' . $bahan['id']); ?>" class="btn btn-warning btn-sm">Edit</a>
+                                        
+                                        <form action="<?= site_url('gudang/bahan/delete/' . $bahan['id']); ?>" method="post" class="d-inline" id="form-hapus-<?= $bahan['id']; ?>">
+                                            <?= csrf_field(); ?>
+                                            <button type="button" class="btn btn-danger btn-sm btn-hapus" 
+                                                    data-nama="<?= esc($bahan['nama']); ?>" 
+                                                    data-form-id="form-hapus-<?= $bahan['id']; ?>">
+                                                Hapus
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="8" class="text-center">Belum ada data bahan baku.</td>
+                                <td colspan="5" class="text-center">Belum ada data bahan baku.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
